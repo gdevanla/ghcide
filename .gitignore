@@ -16,3 +16,4 @@ ghcide-bench
 ghcide-preprocessor
 *.benchmark-gcStats
 tags
+test/data/multi/.ghc.environment.x86_64-linux-8.8.3
