@@ -1,24 +1,55 @@
-# Upon change, also update hie.yaml.cbl and hie.yaml.stack
-
 cradle:
-  multi:
-    - path: "./test/data"
-      config: { cradle: { none:  } }
-    - path: "./"
-      config:
-        cradle:
-          cabal:
-            - path: "./src"
-              component: "ghcide:lib:ghcide"
-            - path: "./exe"
-              component: "ghcide:exe:ghcide"
-            - path: "./session-loader"
-              component: "ghcide:lib:ghcide"
-            - path: "./test"
-              component: "ghcide:test:ghcide-tests"
-            - path: "./bench"
-              component: "ghcide:exe:ghcide-bench"
-            - path: "./bench/hist"
-              component: "ghcide:bench:benchHist"
-            - path: "./test/preprocessor"
-              component: "ghcide:exe:ghcide-test-preprocessor"
+  stack:
+    - path: "./src"
+      component: "ghcide:lib"
+
+    - path: "./session-loader"
+      component: "ghcide:lib"
+
+    - path: "./src-ghc86"
+      component: "ghcide:lib"
+
+    - path: "./src-ghc88"
+      component: "ghcide:lib"
+
+    - path: "./src-ghc810"
+      component: "ghcide:lib"
+
+    - path: "./test/preprocessor/Main.hs"
+      component: "ghcide:exe:ghcide-test-preprocessor"
+
+    - path: "././bench/hist/Main.hs"
+      component: "ghcide:bench:benchHist"
+
+    - path: "./exe/Main.hs"
+      component: "ghcide:exe:ghcide"
+
+    - path: "./exe/Arguments.hs"
+      component: "ghcide:exe:ghcide"
+
+    - path: "./exe/Paths_ghcide.hs"
+      component: "ghcide:exe:ghcide"
+
+    - path: "./test/cabal"
+      component: "ghcide:test:ghcide-tests"
+
+    - path: "./test/exe"
+      component: "ghcide:test:ghcide-tests"
+
+    - path: "./test/src"
+      component: "ghcide:test:ghcide-tests"
+
+    - path: "./bench/lib"
+      component: "ghcide:test:ghcide-tests"
+
+    - path: "./bench/lib/Main.hs"
+      component: "ghcide:exe:ghcide-bench"
+
+    - path: "./bench/exe/Main.hs"
+      component: "ghcide:exe:ghcide-bench"
+
+    - path: "./bench/lib/Experiments.hs"
+      component: "ghcide:exe:ghcide-bench"
+
+    - path: "./bench/exe/Experiments.hs"
+      component: "ghcide:exe:ghcide-bench"
