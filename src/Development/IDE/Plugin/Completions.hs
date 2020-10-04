@@ -5,6 +5,8 @@
 module Development.IDE.Plugin.Completions
     (
       plugin
+    , produceCompletions
+    , ProduceCompletions(..)
     , getCompletionsLSP
     ) where
 
@@ -155,7 +157,8 @@ getCompletionsLSP lsp ide
               (Just pfix', _) -> do
                   -- TODO pass the real capabilities here (or remove the logic for snippets)
                 let fakeClientCapabilities = ClientCapabilities Nothing Nothing Nothing Nothing
-                Completions . List <$> getCompletions ideOpts cci' parsedMod bindMap pfix' fakeClientCapabilities (WithSnippets True)
+                return (Completions $ List [])
+                -- Completions . List <$> getCompletions ideOpts cci' parsedMod bindMap pfix' fakeClientCapabilities (WithSnippets True)
               _ -> return (Completions $ List [])
           _ -> return (Completions $ List [])
       _ -> return (Completions $ List [])
