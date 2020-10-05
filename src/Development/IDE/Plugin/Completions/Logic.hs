@@ -405,7 +405,6 @@ getCompletions ideOpts CC { allModNamesAsNS, unqualCompls, qualCompls, importabl
 
       filtCompls = map Fuzzy.original $ Fuzzy.filter prefixText ctxCompls "" "" label False
         where
-
           mcc = case maybe_parsed of
             Nothing -> Nothing
             Just (pm, pmapping) ->

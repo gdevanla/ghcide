@@ -1,6 +1,5 @@
-module Development.IDE.Plugin.Completions.Types (
-  module Development.IDE.Plugin.Completions.Types
-) where
+module Development.IDE.Plugin.Completions.Types
+where
 
 import           Control.DeepSeq
 import qualified Data.Map  as Map

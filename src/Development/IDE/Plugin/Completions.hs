@@ -8,6 +8,7 @@ module Development.IDE.Plugin.Completions
     , produceCompletions
     , ProduceCompletions(..)
     , getCompletionsLSP
+    , CachedCompletions(..)
     ) where
 
 import Language.Haskell.LSP.Messages
